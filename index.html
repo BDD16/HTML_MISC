@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html id="htmlTop">
+    <head>
+
+        <title data-bind="text: title"></title>
+
+         <link rel="stylesheet" href="theme.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+        <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+        <link rel="stylesheet" href="app.css">
+        <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src='./scripts/bower_components/knockout/dist/knockout.js'></script>
+        <script type="text/javascript" src='./scripts/knockout-postbox.js'></script>
+        <script type="text/javascript" src="./bower_components/crypto-js/crypto-js.js"></script>
+        <script src="./python/App/Main/static/js/js.cookie.js"></script>
+        <script data-main="./scripts/main" type="text/javascript" src="./scripts/require.js"></script>
+
+
+
+    </head>
+    <body class="pastel">
+
+        <div class="main">
+
+            <div class="menu" id="TopMenuBar">
+                <div>
+                    <like-widget params="value: Tasklist.index.buttonEnabled"></like-widget>
+                 </div>
+                <login-widget params="value: Tasklist.index.buttonEnabled"></login-widget>
+            </div>
+             <div class="HULKlegs">
+                <div >
+                    <form data-bind="submit: addLogin" id="htmlLogin" method="POST">
+                        <strong class="white">Username: <input data-bind="value: index.userName"/> </strong>
+                        <strong class="white">Password: <input type="password" data-bind="value: index.passWord"/></strong>
+                        <button type="submit" data-bind="enable: index.buttonEnabled" >Login</button>
+                        <strong class="white" data-bind="text: index.userPass"></strong>
+                    </form>
+                    <p class="center"> Add a Task! </p>
+                    <form data-bind="submit: addTask" id="htmlSignup">
+                        <strong class="white">Subject: <input data-bind="value: taskSubject"/> </strong>
+                        <strong class="white">Tasking: <input data-bind="value: taskContent"/></strong>
+                        <button type="submit" data-bind="enable: Tasklist.index.signbuttonEnabled" >Add Task</button>
+                        <strong class="white" data-bind="text: signuserPass"></strong>
+                    </form>
+                </div>
+
+<!--                 <div><script type="text/javascript" src="./scripts/main.js"></script></div>-->
+            <ul class="Bottommenu">
+                <li><a href ="./View/View1/view1.html"><img width="50px" height="50px" data-bind="attr : {src: HULK}" /></a></li>
+                <a>(c) BDD16 2019 </a>
+            </ul>
+        </div>
+    </body>
+</html>

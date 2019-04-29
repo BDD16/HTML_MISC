@@ -1,0 +1,123 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 28, 2018, 5:56:02 PM
+    Author     : ATX
+*/
+
+.menu {
+  list-style: none;
+  overflow:hidden;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+  background-color: darkseagreen;
+  text-align: right;
+  position:relative;
+  top:0;
+  width:100%;
+}
+
+.menu a {
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.menu a:before {
+    content: "|"
+}
+
+.menu a:after {
+    content: "|"
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+@media screen and (max-width: 500px) {
+  .menu a {
+    float: none;
+    display: block;
+  }
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.Bottommenu:before{
+    content: "-*-*-*-*-"
+}
+
+.Bottommenu:after{
+    content: "-*-*-*-*-"
+}
+
+.Bottommenu {
+  list-style: none;
+  border-top:0.5em solid green;
+  border-bottom: 1em solid purple;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+  background-color: darkseagreen;
+  
+ 
+  position:fixed;
+  bottom:0;
+  text-align: center;
+  width:100%;
+}
+
+.Bottommenu > li {
+  display: inline;
+  background-color: mediumseagreen;
+  
+}
+
+.Bottommenu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.pastel {
+    
+    background-image: url("./images/HULK_Background.png");
+   
+}
+.HULKlegs > div {
+    background:rgba(67,12,96,0.6);
+    position:relative;
+    text-align: center;
+    
+}
+
+.white{
+    font-size: 15px;
+    color:whitesmoke;
+}
+
+.main{
+    
+}
+
+.center {
+    text-align: center;
+    font-size: 15px;
+    color:whitesmoke;
+}
